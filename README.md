@@ -26,4 +26,9 @@ ExecStart=/home/tpcloud/mountnfs.sh start
 WantedBy=multi-user.target
 ```
 
+```
+systemctl nfs-mount start
+systemctl start nfs-mount
+
+```
 
