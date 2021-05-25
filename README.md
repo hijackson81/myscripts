@@ -1,9 +1,9 @@
 How to make a script run as a service
 
-""
+...
 vi /etc/systemd/system/nfs-mount.service
-""
-
+...
+...
 [Unit]
 Description=My custom startup script
 # After=network.target
@@ -23,3 +23,4 @@ ExecStart=/home/tpcloud/mountnfs.sh start
 # StartLimitBurst=10
 [Install]
 WantedBy=multi-user.target
+...
