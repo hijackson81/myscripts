@@ -1,9 +1,10 @@
-How to make a script run as a service
+# How to make a script run as a service
 
-""
+```
 vi /etc/systemd/system/nfs-mount.service
-""
+```
 
+```
 [Unit]
 Description=My custom startup script
 # After=network.target
@@ -13,7 +14,7 @@ Description=My custom startup script
 # User=spark
 # Type=simple
 # PIDFile=/run/my-service.pid
-ExecStart=/home/tpcloud/mountnfs.sh start
+ExecStart=/home/youruserhome/mountnfs.sh start
 # ExecReload=/home/transang/startup.sh reload
 # ExecStop=/home/transang/startup.sh stop
 # TimeoutSec=30
@@ -23,3 +24,11 @@ ExecStart=/home/tpcloud/mountnfs.sh start
 # StartLimitBurst=10
 [Install]
 WantedBy=multi-user.target
+```
+
+```
+systemctl nfs-mount start
+systemctl start nfs-mount
+
+```
+

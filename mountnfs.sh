@@ -1,13 +1,9 @@
 #!/bin/bash
 
 # This is custom script from ondrejh/mountnfs.sh
-# This script should do:
-#
-# 1) test if nfs folder is mounted and exit 0 if yes
-# 2) try to mount it and exit 0 if success
-# 3) try to wake the server if not possible to mount
-# 4) wait while its not woked (pinging)
-# 5) try againt 2-4 several times
+
+# wait while its not woked (pinging)
+# try againt 2-4 several times
 #
 
 # settings
